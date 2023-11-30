@@ -1,7 +1,7 @@
 package car;
 
 public abstract class Truck extends Car {
-    private int tonnage;
+    private final int tonnage;
 
     public Truck(String color, String transmission, double price, int radius) {
         super(color, transmission, price, radius);

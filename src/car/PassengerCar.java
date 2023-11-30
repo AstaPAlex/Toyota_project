@@ -3,7 +3,7 @@ package car;
 import car.equipment.Cruise;
 
 public abstract class PassengerCar extends Car {
-    private Cruise cruise;
+    private final Cruise cruise;
 
     public PassengerCar(String color, String transmission, double price, int radius) {
         super(color, transmission, price, radius);

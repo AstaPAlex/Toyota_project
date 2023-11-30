@@ -7,16 +7,16 @@ import car.interaction.FunctionalTesting;
 import car.interaction.Lighting;
 
 public abstract class Car implements Driving, Lighting, FunctionalTesting {
-    private String color;
-    private int maxSpeed;
-    private String transmission;
+    private final String color;
+    private final int maxSpeed;
+    private final String transmission;
     private boolean isDriving;
-    private Wheels wheels;
-    private FuelTank fuelTank;
-    private Motor motor;
-    private Electrics electrics;
-    private double price;
-    private Headlight headlight;
+    private final Wheels wheels;
+    private final FuelTank fuelTank;
+    private final Motor motor;
+    private final Electrics electrics;
+    private final double price;
+    private final Headlight headlight;
 
     public Car(String color, String transmission, double price, int radius) {
         this.color = color;

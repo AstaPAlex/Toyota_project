@@ -1,7 +1,7 @@
 package car;
 
 public class Hiance extends Truck {
-    private boolean spareWheel;
+    private final boolean spareWheel;
 
     public Hiance(String color, String transmission, double price) {
         super(color, transmission, price, 20);

@@ -3,7 +3,7 @@ package car;
 import car.equipment.PowerSocket;
 
 public class Dyna extends Truck {
-    private PowerSocket powerSocket;
+    private final PowerSocket powerSocket;
 
     public Dyna(String color, String transmission, double price) {
         super(color, transmission, price, 20);

@@ -3,7 +3,7 @@ package car;
 import car.equipment.Usb;
 
 public class Camry extends PassengerCar {
-    private Usb usb;
+    private final Usb usb;
 
     public Camry(String color, String transmission, double price) {
         super(color, transmission, price, 17);
@@ -17,4 +17,5 @@ public class Camry extends PassengerCar {
         System.out.println("__________________________________");
         return true;
     }
+
 }

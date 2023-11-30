@@ -3,7 +3,7 @@ package car;
 import car.equipment.MiniIceBox;
 
 public class Solara extends Cabriolet {
-    private MiniIceBox miniIceBox;
+    private final MiniIceBox miniIceBox;
 
     public Solara(String color, String transmission, double price) {
         super(color, transmission, price, 16);
