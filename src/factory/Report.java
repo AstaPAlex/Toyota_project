@@ -34,7 +34,7 @@ public class Report {
                     + ", прибыль: " + (price - costPrice));
             System.out.println("Отчет о продажах сохранен!");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Отчет не сохранен!");
         }
     }
 }
