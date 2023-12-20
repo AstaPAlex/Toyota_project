@@ -1,5 +1,5 @@
 package car.interaction;
 
 public interface FunctionalTesting {
-    public boolean functionalTesting();
+    public void functionalTesting();
 }

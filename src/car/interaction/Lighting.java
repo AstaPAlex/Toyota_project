@@ -1,6 +1,7 @@
 package car.interaction;
 
 public interface Lighting {
-    public boolean onHeadlight();
-    public boolean offHeadlight();
+    public void onHeadlight();
+
+    public void offHeadlight();
 }

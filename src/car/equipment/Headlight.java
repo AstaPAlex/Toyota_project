@@ -1,23 +1,24 @@
 package car.equipment;
 
 public class Headlight {
-    private boolean isWork;
+    private static final String STATUS_WORK = "Фары включены: %b\n";
+    private boolean isOnHeadLight = false;
 
-    public Headlight() {
-        isWork = false;
+    public void onHeadLight() {
+        isOnHeadLight = true;
+        info();
     }
 
-    public boolean isWork() {
-        return isWork;
+    public void offHeadLight() {
+        isOnHeadLight = false;
+        info();
     }
 
-    public boolean onWork() {
-        isWork = true;
-        return true;
+    private void info() {
+        System.out.printf(STATUS_WORK, isOnHeadLight);
     }
 
-    public boolean offWork() {
-        isWork = false;
-        return true;
+    public boolean isOnHeadLight() {
+        return isOnHeadLight;
     }
 }

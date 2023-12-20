@@ -1,23 +1,17 @@
 package car.equipment;
 
 public class Cruise {
-    private boolean isWork;
+    private boolean onCruise = false;
 
-    public Cruise() {
-        isWork = false;
+    public void onCruise() {
+        onCruise = true;
     }
 
-    public boolean onCruise() {
-        isWork = true;
-        return true;
+    public void offCruise() {
+        onCruise = false;
     }
 
-    public boolean offCruise() {
-        isWork = false;
-        return true;
-    }
-
-    public boolean isWork() {
-        return isWork;
+    public boolean isOnCruise() {
+        return onCruise;
     }
 }

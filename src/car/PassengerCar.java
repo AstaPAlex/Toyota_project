@@ -1,19 +1,22 @@
 package car;
 
-import car.equipment.Cruise;
+import car.equipment.*;
+import factory.Country;
 
 public abstract class PassengerCar extends Car {
-    private final Cruise cruise;
+    protected final Cruise cruise;
 
-    public PassengerCar(String color, String transmission, double price, int radius) {
-        super(color, transmission, price, radius);
-        cruise = new Cruise();
+    public PassengerCar(String color, double price, int radius, Transmission transmission,
+                        FuelTank fuelTank, Motor motor, Electrics electrics, int maxSpeed,
+                        Headlight headlight, TypeCar model, Cruise cruise, Country country) {
+        super(color, price, radius, transmission, fuelTank, motor, electrics, maxSpeed,
+                headlight, model, country);
+        this.cruise = cruise;
     }
 
     @Override
-     public boolean functionalTesting() {
+     public void functionalTesting() {
         super.functionalTesting();
-         System.out.printf("Включен Круиз: %b \n ", cruise.isWork());
-        return true;
-     }
+        System.out.printf("Включен Круиз: %b \n ", cruise.isOnCruise());
+    }
 }

@@ -1,20 +1,24 @@
 package car;
 
+import car.equipment.*;
+import factory.Country;
+
 public abstract class Cabriolet extends PassengerCar {
-    private boolean isRoofUp;
-    public Cabriolet(String color, String transmission, double price, int radius) {
-        super(color, transmission, price, radius);
+    protected boolean isRoofUp = true;
+
+    public Cabriolet(String color, double price, int radius, Transmission transmission,
+                     FuelTank fuelTank, Motor motor, Electrics electrics, int maxSpeed,
+                     Headlight headlight, TypeCar typeCar, Cruise cruise, Country country) {
+        super(color, price, radius, transmission, fuelTank, motor, electrics, maxSpeed,
+                headlight, typeCar, cruise, country);
+    }
+
+    public void roofUp() {
         isRoofUp = true;
     }
 
-    public boolean roofUp() {
-        isRoofUp = true;
-        return true;
-    }
-
-    public boolean roofDown() {
+    public void roofDown() {
         isRoofUp = false;
-        return true;
     }
 
     public boolean isRoofUp() {
@@ -22,9 +26,8 @@ public abstract class Cabriolet extends PassengerCar {
     }
 
     @Override
-    public boolean functionalTesting() {
+    public void functionalTesting() {
         super.functionalTesting();
-        System.out.printf("Наличие откидной крыши: %b \n ", isRoofUp);
-        return true;
+        System.out.printf("Откидная крыша поднята: %b \n ", isRoofUp);
     }
 }

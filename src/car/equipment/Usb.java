@@ -1,20 +1,14 @@
 package car.equipment;
 
 public class Usb {
-    private boolean readyMusic;
+    private boolean readyMusic = false;
 
-    public Usb() {
-        readyMusic = false;
-    }
-
-    public boolean onMusic() {
+    public void onMusic() {
         readyMusic = true;
-        return true;
     }
 
-    public boolean offMusic() {
+    public void offMusic() {
         readyMusic = false;
-        return true;
     }
 
     public boolean isReadyMusic() {

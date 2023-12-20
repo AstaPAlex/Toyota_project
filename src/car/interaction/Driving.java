@@ -1,8 +1,9 @@
 package car.interaction;
 
-import car.error.StartCarException;
+import car.exeption.StartCarException;
 
 public interface Driving {
-    public boolean startDriving() throws StartCarException;
-    public boolean endDriving();
+    public void startDriving() throws StartCarException;
+
+    public void endDriving();
 }
